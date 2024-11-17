@@ -6,4 +6,3 @@ export interface User {
   posts: Post[];
   friends: User[];
 }
-

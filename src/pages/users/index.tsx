@@ -16,14 +16,13 @@ const UsersPage = () => {
       try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users`);
         const data = await res.json();
-        setUsers(data.users);  // Update this line based on your API response
+        setUsers(data.users);
         setLoading(false);
       } catch (err) {
         setError("Failed to fetch users");
         setLoading(false);
       }
     };
-
     fetchUsers();
   }, []);
 
@@ -52,4 +51,3 @@ const UsersPage = () => {
 };
 
 export default UsersPage;
-

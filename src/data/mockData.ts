@@ -18,8 +18,28 @@ export const mockUsers = [
 ];
 
 export const mockPosts = [
-  { id: 1, title: "First Post", content: "This is the first post", authorId: 1 },
-  { id: 2, title: "Another Post", content: "This is another post by John", authorId: 1 },
-  { id: 3, title: "Jane's Thoughts", content: "Thoughts from Jane", authorId: 2 },
-  { id: 4, title: "Alice's Update", content: "An update from Alice", authorId: 3 },
+  {
+    id: 1,
+    title: "First Post",
+    content: "This is the first post",
+    authorId: 1,
+  },
+  {
+    id: 2,
+    title: "Another Post",
+    content: "This is another post by John",
+    authorId: 1,
+  },
+  {
+    id: 3,
+    title: "Jane's Thoughts",
+    content: "Thoughts from Jane",
+    authorId: 2,
+  },
+  {
+    id: 4,
+    title: "Alice's Update",
+    content: "An update from Alice",
+    authorId: 3,
+  },
 ];
