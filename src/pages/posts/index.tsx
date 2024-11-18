@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
+import { useEffect, useState } from "react";
+import Link from "next/link";
 
 interface Post {
   id: number;
@@ -14,12 +14,12 @@ const PostsPage = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await fetch('/api/posts');
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts`);
         const data = await res.json();
         setPosts(data.posts);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching posts:', error);
+        console.error("Error fetching posts:", error);
         setLoading(false);
       }
     };
@@ -32,7 +32,9 @@ const PostsPage = () => {
   return (
     <div className="p-4 bg-gray-100 min-h-screen">
       <Link href="/">
-        <span className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Home</span>
+        <span className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Home
+        </span>
       </Link>
       <h1 className="text-2xl font-bold mb-4">Posts</h1>
       <ul className="space-y-4">

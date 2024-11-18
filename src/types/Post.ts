@@ -5,4 +5,3 @@ export interface Post {
   timestamp: string; // ISO Date String or Unix Timestamp
   authorId: number; // Reference to User
 }
-
